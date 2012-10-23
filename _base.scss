@@ -1,0 +1,103 @@
+// Compass Extensions
+@import 'aurora/susy-grid';
+
+
+// Private Imports
+@import 'variables';
+@import 'functions';
+@import 'mixins';
+@import 'extendables';
+@import 'as';
+
+
+// Reset 
+@include global-reset;
+
+
+// Flexible Grid 
+
+$total-columns: 12;
+$column-width: 4em;
+$gutter-width: 1em;
+$grid-padding: $gutter-width;
+$container-width: 60em;
+
+$show-grid-backgrounds: true;
+
+
+// Vertical Rhythm 
+
+$base-font-size: 14px;
+$base-line-height: 17px;
+$default-rhythm-border-style: solid;
+$ie-font-ratio: 17px / 100%;
+$base-rhythm-unit: $base-line-height / $base-font-size * 1em;
+$base-leader: ($base-line-height - $base-font-size) * 1em / $base-font-size;
+$base-half-leader: $base-leader / 2;
+
+
+// Colors 
+
+$main-color: #333333;
+$link-color: #4DA1BD;
+$link-accent: #7DCEE9;
+
+$dark-grey: #333333;
+$light-grey: #555555;
+$grey-hover: #bfbfbf;
+
+$default-text-shadow-color: rgba(0,0,0,.6);
+$default-text-shadow-blur: 1px;
+$default-text-shadow-v-offset: 1px;
+
+
+// Typography 
+
+$main-font: 'HelveticaNeueRegular', sans-serif;
+
+body{
+  font-family: $main-font;
+  background: #f9faf9;
+  color: $light-grey;
+}
+ 
+p{
+  @include trailer(1);
+}
+
+a{
+  color: $link-color;
+  text-decoration: none;
+  @include transition-property(color);
+  @include transition-duration(800ms);
+  &:hover{
+    @include transition-property(color);
+    @include transition-duration(300ms);
+    color: $link-accent;
+  }
+}
+  
+h1, h2, h3, h4, h5, h6{
+  font-weight: bold;
+  @include trailer(1);
+}
+
+h1{
+  @include adjust-font-size-to(24px);
+  @include trailer(0.7);
+}
+
+h2{
+  @include adjust-font-size-to(18px);
+  @include adjust-leading-to(0.5);
+  @include trailer(0.7);
+}
+
+h3{
+  @include adjust-font-size-to(14px);
+}
+
+h4{
+  @include adjust-font-size-to(14px);
+}
+
