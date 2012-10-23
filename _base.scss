@@ -53,12 +53,18 @@ $default-text-shadow-v-offset: 1px;
 
 // Typography 
 
-$main-font: 'HelveticaNeueRegular', sans-serif;
+$main-font: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+$heading-font: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+
+html{
+	font-size: 100%;
+}
 
 body{
   font-family: $main-font;
-  background: #f9faf9;
-  color: $light-grey;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility\9; // Only IE, can mess with Android
 }
  
 p{
@@ -78,6 +84,7 @@ a{
 }
   
 h1, h2, h3, h4, h5, h6{
+	font-family: $heading-font;
   font-weight: bold;
   @include trailer(1);
 }
@@ -89,7 +96,6 @@ h1{
 
 h2{
   @include adjust-font-size-to(18px);
-  @include adjust-leading-to(0.5);
   @include trailer(0.7);
 }
 
