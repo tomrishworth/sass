@@ -2,14 +2,6 @@
 @import 'aurora/susy-grid';
 
 
-// Private Imports
-@import 'variables';
-@import 'functions';
-@import 'mixins';
-@import 'extendables';
-@import 'as';
-
-
 // Reset 
 @include global-reset;
 
@@ -23,6 +15,13 @@ $grid-padding: $gutter-width;
 $container-width: 60em;
 
 $show-grid-backgrounds: true;
+
+
+// Breakpoints
+
+$breakpoint-small: 500px;
+$breakpoint-medium: 500px 700px;
+$breakpoint-large: min-width 700px;
 
 
 // Vertical Rhythm 
