@@ -1,4 +1,4 @@
 sass
 ====
 
-Base sass partial used by Atmosphere Studios
+Sass partials used by Atmosphere Studios
