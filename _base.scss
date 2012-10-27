@@ -60,49 +60,49 @@ html{
 }
 
 body{
-  font-family: $main-font;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-rendering: optimizeLegibility\9; // Only IE, can mess with Android
+	font-family: $main-font;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility\9; // Only IE, can mess with Android
 }
- 
+
 p{
-  @include trailer(1);
+	@include trailer(1);
 }
 
 a{
-  color: $link-color;
-  text-decoration: none;
-  @include transition-property(color);
-  @include transition-duration(800ms);
-  &:hover{
-    @include transition-property(color);
-    @include transition-duration(300ms);
-    color: $link-accent;
-  }
+	color: $link-color;
+	text-decoration: none;
+	@include transition-property(color);
+	@include transition-duration(800ms);
+	&:hover{
+		@include transition-property(color);
+		@include transition-duration(300ms);
+		color: $link-accent;
+	}
 }
-  
+
 h1, h2, h3, h4, h5, h6{
 	font-family: $heading-font;
-  font-weight: bold;
-  @include trailer(1);
+	font-weight: bold;
+	@include trailer(1);
 }
 
 h1{
-  @include adjust-font-size-to(24px);
-  @include trailer(0.7);
+	@include adjust-font-size-to(24px);
+	@include trailer(0.7);
 }
 
 h2{
-  @include adjust-font-size-to(18px);
-  @include trailer(0.7);
+	@include adjust-font-size-to(18px);
+	@include trailer(0.7);
 }
 
 h3{
-  @include adjust-font-size-to(14px);
+	@include adjust-font-size-to(14px);
 }
 
 h4{
-  @include adjust-font-size-to(14px);
+	@include adjust-font-size-to(14px);
 }
 
